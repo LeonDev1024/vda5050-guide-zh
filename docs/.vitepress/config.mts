@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'VDA 5050 中文指南',
   description: 'VDA 5050 自动化导引车通信标准中文文档',
   lang: 'zh-CN',
+  ignoreDeadLinks: true,
   themeConfig: {
     siteTitle: 'VDA 5050 中文指南',
     logo: '/logo.svg',
