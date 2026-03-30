@@ -46,57 +46,10 @@ npm install
 npm run docs:dev
 ```
 
-## 在线部署
+## 在线预览地址
+https://leondev1024.github.io/vda5050-guide-zh/
 
-### 方式一：GitHub Pages（推荐）
 
-1. 在 GitHub 仓库设置中启用 GitHub Pages
-2. Source 选择 "GitHub Actions"
-3. 推送代码后自动部署
-
-或手动配置：
-
-1. 构建文档：
-   ```bash
-   npm run docs:build
-   ```
-2. 将 `docs/.vitepress/dist` 目录内容推送到 `gh-pages` 分支
-3. 在仓库设置中启用 Pages，Source 选择 `gh-pages` 分支
-
-### 方式二：Vercel
-
-1. 将代码推送到 GitHub
-2. 在 [Vercel](https://vercel.com) 导入仓库
-3. Vercel 会自动检测 VitePress 并配置部署
-
-### 方式三：Netlify
-
-1. 将代码推送到 GitHub
-2. 在 [Netlify](https://netlify.com) 导入仓库
-3. Build command: `npm run docs:build`
-4. Publish directory: `docs/.vitepress/dist`
-
-## 当前进度
-
-| 章节 | 状态 |
-|------|------|
-| 01-intro.md 简介 | ✅ 完成 |
-| 02-scope.md 范围 | ✅ 完成 |
-| 03-definitions.md 术语定义 | ✅ 完成 |
-| 04-transport.md 传输协议 | ✅ 完成 |
-| 05-process.md 通信流程 | ✅ 完成 |
-| 06-order.md 订单协议 | ✅ 完成 |
-| 07-actions.md 动作定义 | ✅ 完成 |
-| 08-maps.md 地图 | ✅ 完成 |
-| 09-zones.md 区域 | ✅ 完成 |
-| 10-connection.md 连接 | ✅ 完成 |
-| 11-state.md 状态 | ✅ 完成 |
-| 12-visualization.md 可视化 | ✅ 完成 |
-| 13-factsheet.md 信息单 | ✅ 完成 |
-| 14-messages.md 消息规格 | ✅ 完成 |
-| glossary.md 术语表 | ✅ 完成 |
-| faq.md 常见问题 | ✅ 完成 |
-| examples/ 示例 | 待补充 |
 
 ## 官方资源
 
