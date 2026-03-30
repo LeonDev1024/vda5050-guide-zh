@@ -4,10 +4,10 @@ export default defineConfig({
   title: 'VDA 5050 中文指南',
   description: 'VDA 5050 自动化导引车通信标准中文文档',
   lang: 'zh-CN',
+  base: '/vda5050-guide-zh/',
   ignoreDeadLinks: true,
   themeConfig: {
     siteTitle: 'VDA 5050 中文指南',
-    logo: '/logo.svg',
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/docs/01-intro' },
