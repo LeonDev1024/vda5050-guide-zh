@@ -4,7 +4,7 @@
 
 ## 系统架构
 
-> ![系统架构图](./assets/csagv.png)
+> ![系统架构图](../assets/csagv.png)
 
 ## 消息流程
 
