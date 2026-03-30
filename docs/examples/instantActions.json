@@ -1,0 +1,33 @@
+{
+  "headerId": 100,
+  "timestamp": "2024-01-15T14:31:00.000Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "instantActions": [
+    {
+      "actionType": "startPause",
+      "actionId": "pause-001",
+      "blockingType": "NONE",
+      "actionParameters": []
+    },
+    {
+      "actionType": "pick",
+      "actionId": "instant-pick-001",
+      "blockingType": "NONE",
+      "actionParameters": [
+        { "key": "lhd", "value": "LHD1" },
+        { "key": "stationType", "value": "floor" },
+        { "key": "loadId", "value": "emergency-load-001" }
+      ]
+    },
+    {
+      "actionType": "trigger",
+      "actionId": "trigger-001",
+      "blockingType": "NONE",
+      "actionParameters": [
+        { "key": "triggerId", "value": "wait-001" }
+      ]
+    }
+  ]
+}

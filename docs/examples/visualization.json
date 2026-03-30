@@ -1,0 +1,33 @@
+{
+  "headerId": 9999,
+  "timestamp": "2024-01-15T14:35:01.000Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "position": {
+    "x": 45.5,
+    "y": 18.2,
+    "theta": 1.45,
+    "mapId": "factory-floor-1"
+  },
+  "velocity": {
+    "x": 0.8,
+    "y": 0.0,
+    "omega": 0.05
+  },
+  "plannedPath": {
+    "type": "NURBS",
+    "controlPoints": [
+      { "x": 45.5, "y": 18.2 },
+      { "x": 47.0, "y": 19.0 },
+      { "x": 48.5, "y": 19.5 },
+      { "x": 50.0, "y": 20.0 }
+    ],
+    "degree": 3
+  },
+  "intermediatePath": [
+    { "x": 46.0, "y": 18.5, "orientation": 1.4 },
+    { "x": 47.5, "y": 19.2, "orientation": 1.5 },
+    { "x": 49.0, "y": 19.8, "orientation": 1.55 }
+  ]
+}

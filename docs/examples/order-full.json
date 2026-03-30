@@ -1,0 +1,142 @@
+{
+  "headerId": 1234,
+  "timestamp": "2024-01-15T14:30:00.123Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "orderId": "transport-2024-001",
+  "orderUpdateId": 0,
+  "nodes": [
+    {
+      "nodeId": "station-pick-01",
+      "sequenceId": 0,
+      "released": true,
+      "nodeDescriptor": "Pickup Station A",
+      "nodePosition": {
+        "x": 10.0,
+        "y": 5.0,
+        "theta": 0.0
+      },
+      "actions": [
+        {
+          "actionType": "pick",
+          "actionId": "pick-001",
+          "blockingType": "HARD",
+          "actionParameters": [
+            { "key": "lhd", "value": "LHD1" },
+            { "key": "stationType", "value": "rack" },
+            { "key": "stationName", "value": "Rack-A-01" },
+            { "key": "loadType", "value": "EPAL" },
+            { "key": "loadId", "value": "pallet-12345" }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "node-001",
+      "sequenceId": 2,
+      "released": true,
+      "nodeDescriptor": "Waypoint 1"
+    },
+    {
+      "nodeId": "node-002",
+      "sequenceId": 4,
+      "released": true,
+      "nodeDescriptor": "Waypoint 2"
+    },
+    {
+      "nodeId": "station-drop-01",
+      "sequenceId": 6,
+      "released": true,
+      "nodeDescriptor": "Drop-off Station B",
+      "nodePosition": {
+        "x": 50.0,
+        "y": 20.0,
+        "theta": 1.57
+      },
+      "actions": [
+        {
+          "actionType": "drop",
+          "actionId": "drop-001",
+          "blockingType": "HARD",
+          "actionParameters": [
+            { "key": "lhd", "value": "LHD1" },
+            { "key": "stationType", "value": "conveyor" },
+            { "key": "stationName", "value": "Conveyor-B-01" },
+            { "key": "loadId", "value": "pallet-12345" }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "node-003",
+      "sequenceId": 8,
+      "released": false,
+      "nodeDescriptor": "Future waypoint"
+    },
+    {
+      "nodeId": "node-004",
+      "sequenceId": 10,
+      "released": false,
+      "nodeDescriptor": "Future waypoint 2"
+    }
+  ],
+  "edges": [
+    {
+      "edgeId": "edge-001",
+      "sequenceId": 1,
+      "released": true,
+      "edgeDescriptor": "Path to waypoint 1",
+      "fromNodeId": "station-pick-01",
+      "toNodeId": "node-001",
+      "trajectory": {
+        "type": "LINEAR",
+        "points": [
+          { "x": 10.0, "y": 5.0 },
+          { "x": 20.0, "y": 8.0 },
+          { "x": 30.0, "y": 10.0 }
+        ]
+      }
+    },
+    {
+      "edgeId": "edge-002",
+      "sequenceId": 3,
+      "released": true,
+      "edgeDescriptor": "Path to waypoint 2",
+      "fromNodeId": "node-001",
+      "toNodeId": "node-002"
+    },
+    {
+      "edgeId": "edge-003",
+      "sequenceId": 5,
+      "released": true,
+      "edgeDescriptor": "Path to drop-off",
+      "fromNodeId": "node-002",
+      "toNodeId": "station-drop-01",
+      "trajectory": {
+        "type": "LINEAR",
+        "points": [
+          { "x": 30.0, "y": 10.0 },
+          { "x": 40.0, "y": 15.0 },
+          { "x": 50.0, "y": 20.0 }
+        ]
+      }
+    },
+    {
+      "edgeId": "edge-004",
+      "sequenceId": 7,
+      "released": true,
+      "edgeDescriptor": "Return path segment",
+      "fromNodeId": "station-drop-01",
+      "toNodeId": "node-003"
+    },
+    {
+      "edgeId": "edge-005",
+      "sequenceId": 9,
+      "released": false,
+      "edgeDescriptor": "Future path",
+      "fromNodeId": "node-003",
+      "toNodeId": "node-004"
+    }
+  ]
+}

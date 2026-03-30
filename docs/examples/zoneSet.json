@@ -1,0 +1,117 @@
+{
+  "headerId": 50,
+  "timestamp": "2024-01-15T10:05:00.000Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "zoneSet": {
+    "zoneSetId": "factory-zones-001",
+    "mapId": "factory-floor-1",
+    "zoneSetDescriptor": "Main factory floor zones",
+    "zones": [
+      {
+        "zoneId": "blocked-area-1",
+        "zoneType": "BLOCKED",
+        "zoneDescriptor": "Loading dock no-go zone",
+        "vertices": [
+          { "x": 0, "y": 0 },
+          { "x": 5, "y": 0 },
+          { "x": 5, "y": 3 },
+          { "x": 0, "y": 3 }
+        ]
+      },
+      {
+        "zoneId": "speed-limit-1",
+        "zoneType": "SPEED_LIMIT",
+        "zoneDescriptor": "Slow zone near pedestrians",
+        "vertices": [
+          { "x": 10, "y": 0 },
+          { "x": 20, "y": 0 },
+          { "x": 20, "y": 5 },
+          { "x": 10, "y": 5 }
+        ],
+        "maximumSpeed": 0.5
+      },
+      {
+        "zoneId": "line-guided-1",
+        "zoneType": "LINE_GUIDED",
+        "zoneDescriptor": "Assembly line area",
+        "vertices": [
+          { "x": 30, "y": 0 },
+          { "x": 50, "y": 0 },
+          { "x": 50, "y": 10 },
+          { "x": 30, "y": 10 }
+        ]
+      },
+      {
+        "zoneId": "release-zone-1",
+        "zoneType": "RELEASE",
+        "zoneDescriptor": "High traffic intersection",
+        "vertices": [
+          { "x": 25, "y": 15 },
+          { "x": 30, "y": 15 },
+          { "x": 30, "y": 20 },
+          { "x": 25, "y": 20 }
+        ],
+        "releaseLossBehavior": "STOP"
+      },
+      {
+        "zoneId": "priority-zone-1",
+        "zoneType": "PRIORITY",
+        "zoneDescriptor": "Express route",
+        "vertices": [
+          { "x": 0, "y": 20 },
+          { "x": 10, "y": 20 },
+          { "x": 10, "y": 25 },
+          { "x": 0, "y": 25 }
+        ],
+        "priorityFactor": 0.8
+      },
+      {
+        "zoneId": "action-zone-1",
+        "zoneType": "ACTION",
+        "zoneDescriptor": "Gate control zone",
+        "vertices": [
+          { "x": 15, "y": 10 },
+          { "x": 18, "y": 10 },
+          { "x": 18, "y": 12 },
+          { "x": 15, "y": 12 }
+        ],
+        "entryActions": [
+          {
+            "actionType": "openGate",
+            "actionId": "zone-action-001",
+            "blockingType": "SOFT",
+            "actionParameters": [
+              { "key": "gateId", "value": "gate-01" }
+            ]
+          }
+        ],
+        "duringActions": [],
+        "exitActions": [
+          {
+            "actionType": "closeGate",
+            "actionId": "zone-action-002",
+            "blockingType": "SOFT",
+            "actionParameters": [
+              { "key": "gateId", "value": "gate-01" }
+            ]
+          }
+        ]
+      },
+      {
+        "zoneId": "directed-zone-1",
+        "zoneType": "DIRECTED",
+        "zoneDescriptor": "One-way corridor",
+        "vertices": [
+          { "x": 40, "y": 15 },
+          { "x": 50, "y": 15 },
+          { "x": 50, "y": 18 },
+          { "x": 40, "y": 18 }
+        ],
+        "direction": 0,
+        "directedLimitation": "STRICT"
+      }
+    ]
+  }
+}

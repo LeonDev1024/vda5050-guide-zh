@@ -1,0 +1,169 @@
+{
+  "headerId": 1,
+  "timestamp": "2024-01-15T10:00:00.000Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "factsheet": {
+    "manufacturer": "RobotCorp",
+    "serialNumber": "AGV-001",
+    "robotType": "AGV",
+    "robotModel": "RC-2000",
+    "serialNumber": "RC2000-2024-001",
+    "description": "Heavy-duty AGV for pallet transport",
+
+    "dimensions": {
+      "length": 2.5,
+      "width": 1.2,
+      "height": 2.0
+    },
+    "weight": {
+      "ownWeight": 800,
+      "maxPayLoad": 2000
+    },
+
+    "motion": {
+      "maxSpeed": 2.0,
+      "maxAcceleration": 0.5,
+      "maxDeceleration": 0.8,
+      "minTurningRadius": 1.5
+    },
+
+    "battery": {
+      "batteryType": "Li-ion",
+      "batteryCapacity": 48000,
+      "voltage": 48,
+      "chargingTypes": ["automatic", "manual"],
+      "chargingTime": 4,
+      "chargingCurve": [
+        { "time": 0, "charge": 0 },
+        { "time": 2, "charge": 80 },
+        { "time": 4, "charge": 100 }
+      ]
+    },
+
+    "navigation": {
+      "navigationType": "HYBRID",
+      "localizationTypes": ["SLAM", "REFLECTOR", "QR_CODE"],
+      "mapFormats": ["2D", "NAV2"],
+      "supportedMapVersions": ["1.0", "1.1", "1.2"]
+    },
+
+    "driving": {
+      "driveType": "DIFFERENTIAL",
+      "wheelCount": 4,
+      "wheelDiameter": 0.2,
+      "maxPitch": 5,
+      "maxRoll": 5
+    },
+
+    "safety": {
+      "safetyLaser": true,
+      "safetyBumper": true,
+      "emergencyStop": true,
+      "safetyFields": true,
+      "maxSafeSpeed": 1.5
+    },
+
+    "loadHandling": {
+      "loadHandlingTypes": ["FORK", "CONVEYOR", "LIFT"],
+      "loadPositions": ["LHD1", "LHD2"],
+      "maxLiftHeight": 2.0,
+      "maxLoadDimensions": {
+        "length": 1.5,
+        "width": 1.2,
+        "height": 2.0
+      }
+    },
+
+    "communication": {
+      "mqttVersion": "3.1.1",
+      "protocolVersion": "3.0.0",
+      "qosSupport": [0, 1],
+      "websocketSupport": false,
+      "authenticationTypes": ["CERTIFICATE", "USERNAME_PASSWORD"]
+    },
+
+    "sensors": {
+      "laserScanners": 2,
+      "cameras": 4,
+      "ultrasonicSensors": 8,
+      "encoders": 4
+    },
+
+    "environment": {
+      "operatingTemperature": [0, 40],
+      "operatingHumidity": [10, 90],
+      "ipRating": "IP54"
+    },
+
+    "vendorSpecific": {
+      "firmwareVersion": "2.5.1",
+      "hardwareVersion": "HW-2023-B",
+      "serialNumber": "AGV-001-2024"
+    },
+
+    "actionParameters": {
+      "pick": {
+        "lhd": "string",
+        "stationType": "string",
+        "stationName": "string",
+        "loadType": "string",
+        "loadId": "string",
+        "height": "float64",
+        "depth": "float64",
+        "side": "string"
+      },
+      "drop": {
+        "lhd": "string",
+        "stationType": "string",
+        "stationName": "string",
+        "loadType": "string",
+        "loadId": "string",
+        "height": "float64",
+        "depth": "float64",
+        "side": "string"
+      },
+      "startCharging": {},
+      "stopCharging": {}
+    },
+
+    "supportedActions": [
+      "startPause",
+      "stopPause",
+      "startHibernation",
+      "stopHibernation",
+      "shutdown",
+      "startCharging",
+      "stopCharging",
+      "initializePosition",
+      "enableMap",
+      "downloadMap",
+      "deleteMap",
+      "downloadZoneSet",
+      "enableZoneSet",
+      "deleteZoneSet",
+      "pick",
+      "drop",
+      "detectObject",
+      "finePositioning",
+      "waitForTrigger",
+      "trigger",
+      "cancelOrder",
+      "factsheetRequest"
+    ],
+
+    "supportedZones": [
+      "BLOCKED",
+      "LINE_GUIDED",
+      "RELEASE",
+      "COORDINATED_REPLANNING",
+      "SPEED_LIMIT",
+      "ACTION",
+      "PRIORITY",
+      "PENALTY",
+      "DIRECTED",
+      "BIDIRECTED"
+    ]
+  }
+}

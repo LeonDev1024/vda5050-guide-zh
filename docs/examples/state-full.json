@@ -1,0 +1,93 @@
+{
+  "headerId": 5678,
+  "timestamp": "2024-01-15T14:35:00.456Z",
+  "version": "3.0.0",
+  "manufacturer": "RobotCorp",
+  "serialNumber": "AGV-001",
+  "orderId": "transport-2024-001",
+  "orderUpdateId": 2,
+  "lastNodeId": "node-002",
+  "lastNodeSequenceId": 4,
+  "nodeStates": [
+    {
+      "nodeId": "station-drop-01",
+      "sequenceId": 6,
+      "nodeState": "WAITING",
+      "actions": [
+        {
+          "actionId": "drop-001",
+          "actionType": "drop",
+          "actionStatus": "WAITING"
+        }
+      ]
+    }
+  ],
+  "edgeStates": [
+    {
+      "edgeId": "edge-003",
+      "sequenceId": 5,
+      "edgeState": "TRAVERSING"
+    }
+  ],
+  "driving": true,
+  "paused": false,
+  "mobileRobotPosition": {
+    "x": 45.5,
+    "y": 18.2,
+    "theta": 1.45,
+    "mapId": "factory-floor-1",
+    "mapDescription": "Factory Floor 1"
+  },
+  "velocity": {
+    "x": 0.8,
+    "y": 0.0,
+    "omega": 0.05
+  },
+  "loads": [
+    {
+      "loadId": "pallet-12345",
+      "loadPosition": "LHD1",
+      "loadType": "EPAL"
+    }
+  ],
+  "batteryState": {
+    "batteryCharge": 72,
+    "charging": false,
+    "reachability": 3600,
+    "voltage": 48.5,
+    "current": -2.3,
+    "temperature": 25
+  },
+  "operatingMode": "AUTOMATIC",
+  "errors": [],
+  "information": [
+    {
+      "infoType": "LOCALIZATION",
+      "infoLevel": "INFO",
+      "description": "Localization quality good, confidence: 95%"
+    }
+  ],
+  "maps": [
+    {
+      "mapId": "factory-floor-1",
+      "mapVersion": "1.2.0",
+      "mapStatus": "ENABLED"
+    }
+  ],
+  "zoneSets": [
+    {
+      "zoneSetId": "zs-001",
+      "mapId": "factory-floor-1",
+      "zoneSetStatus": "ENABLED"
+    }
+  ],
+  "instantActionStates": [],
+  "actionStates": [
+    {
+      "actionId": "drop-001",
+      "actionType": "drop",
+      "actionStatus": "WAITING",
+      "handle": "LHD1"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+/* 自定义样式 */
+
+:root {
+  /* 主色调 - 使用 VDA 品牌蓝色 */
+  --vp-c-brand-1: #0066b3;
+  --vp-c-brand-2: #00509e;
+  --vp-c-brand-3: #003d7a;
+  --vp-c-brand-soft: rgba(0, 102, 179, 0.14);
+}
+
+/* 代码块样式 */
+.vp-doc pre {
+  border-radius: 8px;
+}
+
+/* 表格样式 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 12px 16px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* 提示框样式 */
+.custom-container.tip {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+}
+
+.custom-container.warning {
+  border-color: #e5a50a;
+  background-color: rgba(229, 165, 10, 0.1);
+}
+
+.custom-container.danger {
+  border-color: #d03050;
+  background-color: rgba(208, 48, 80, 0.1);
+}
+
+/* 代码行内样式 */
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-bg-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* 标题样式 */
+.vp-doc h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* 链接样式 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}
+
+/* 导航栏样式 */
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* 侧边栏样式 */
+.VPSidebar {
+  background-color: var(--vp-c-bg) !important;
+}
+
+/* 代码组样式 */
+.vp-doc .vp-code-group {
+  margin: 1rem 0;
+}

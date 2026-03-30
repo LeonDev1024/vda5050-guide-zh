@@ -1,0 +1,33 @@
+{
+  "headerId": 50,
+  "timestamp": "2024-01-15T14:32:05.000Z",
+  "version": "3.0.0",
+  "manufacturer": "FleetController",
+  "serialNumber": "FC-001",
+  "responses": [
+    {
+      "requestId": "req-001",
+      "requestType": "RELEASE_ZONE_ACCESS",
+      "grantType": "GRANTED",
+      "leaseExpiry": "2024-01-15T14:35:00.000Z"
+    },
+    {
+      "requestId": "req-002",
+      "requestType": "RELEASE_ZONE_ACCESS",
+      "grantType": "QUEUED",
+      "leaseExpiry": null
+    },
+    {
+      "requestId": "req-003",
+      "requestType": "RELEASE_ZONE_ACCESS",
+      "grantType": "REVOKED",
+      "leaseExpiry": null
+    },
+    {
+      "requestId": "req-004",
+      "requestType": "RELEASE_ZONE_ACCESS",
+      "grantType": "REJECTED",
+      "leaseExpiry": null
+    }
+  ]
+}
