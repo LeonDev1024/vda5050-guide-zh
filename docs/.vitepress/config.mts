@@ -55,7 +55,7 @@ export default defineConfig({
           items: [
             { text: '实现指南', link: '/examples/implementation-guide' },
             { text: '调试与故障排除', link: '/16-debugging' },
-            { text: 'JSON 示例', link: '/examples/order-full.json' }
+            { text: 'JSON 示例', link: '/examples/order-full' }
           ]
         },
         {
