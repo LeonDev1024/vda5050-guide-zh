@@ -8,10 +8,15 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": ["vda5050", "agv", "mqtt"],
+  "keywords": [
+    "vda5050",
+    "agv",
+    "mqtt"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "medium-zoom": "^1.1.0",
     "vitepress": "^1.0.0-rc.44",
     "vue": "^3.4.0"
   }
