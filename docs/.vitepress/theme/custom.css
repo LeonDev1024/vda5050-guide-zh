@@ -260,12 +260,6 @@
   z-index: 10000 !important;
 }
 
-/* ===== 侧边栏宽度调整 ===== */
-.VPSidebar {
-  width: 240px !important;
-  max-width: 240px !important;
-}
-
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
   .vp-doc h1 {
