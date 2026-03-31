@@ -8,6 +8,12 @@ export default {
     if (typeof window !== 'undefined') {
       import('medium-zoom').then(({ default: mediumZoom }) => {
         const initZoom = () => {
+          // 查找所有文档内容中的图片
+          const images = document.querySelectorAll('.vp-doc img')
+          images.forEach(img => {
+            img.setAttribute('data-zoomable', '')
+          })
+          // 初始化放大功能
           mediumZoom('[data-zoomable]', {
             margin: 24,
             background: 'rgba(0, 0, 0, 0.8)',
