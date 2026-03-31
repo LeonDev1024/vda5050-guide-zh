@@ -88,8 +88,6 @@ features:
 ## 官方资源
 
 - [VDA 5050 官方 GitHub](https://github.com/VDA5050/VDA5050)
-- [规范文档 (英文)](https://github.com/VDA5050/VDA5050/blob/main/VDA5050_EN.md)
-- [JSON Schema](https://github.com/VDA5050/VDA5050/tree/main/json_schemas)
 
 ---
 
