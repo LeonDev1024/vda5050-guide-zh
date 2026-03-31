@@ -37,10 +37,6 @@ features:
     icon: 🌐
 ---
 
-<script setup>
-import { data as posts } from './posts.data.js'
-</script>
-
 ## 最新更新
 
 <div class="updates">
