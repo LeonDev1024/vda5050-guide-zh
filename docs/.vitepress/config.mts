@@ -8,16 +8,13 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     siteTitle: 'VDA 5050 中文指南',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '快速开始', link: '/01-intro' },
-      { text: '协议概述', link: '/04-transport' },
-      { text: 'GitHub', link: 'https://github.com/VDA5050/VDA5050' }
-    ],
+    outlineTitle: '目录',
+    // 侧边栏可收起
     sidebar: {
       '/': [
         {
           text: '概述',
+          collapsed: false,
           items: [
             { text: '简介', link: '/01-intro' },
             { text: '范围与目标', link: '/02-scope' },
@@ -26,6 +23,7 @@ export default defineConfig({
         },
         {
           text: '核心协议',
+          collapsed: false,
           items: [
             { text: '传输协议', link: '/04-transport' },
             { text: '通信流程', link: '/05-process' },
@@ -35,6 +33,7 @@ export default defineConfig({
         },
         {
           text: '数据模型',
+          collapsed: false,
           items: [
             { text: '地图', link: '/08-maps' },
             { text: '区域', link: '/09-zones' },
@@ -44,6 +43,7 @@ export default defineConfig({
         },
         {
           text: '高级特性',
+          collapsed: false,
           items: [
             { text: '可视化', link: '/12-visualization' },
             { text: '信息单', link: '/13-factsheet' },
@@ -52,6 +52,7 @@ export default defineConfig({
         },
         {
           text: '示例与指南',
+          collapsed: false,
           items: [
             { text: '实现指南', link: '/examples/implementation-guide' },
             { text: '调试与故障排除', link: '/16-debugging' },
@@ -60,6 +61,7 @@ export default defineConfig({
         },
         {
           text: '参考',
+          collapsed: false,
           items: [
             { text: '术语表', link: '/glossary' },
             { text: '常见问题', link: '/faq' }
@@ -67,6 +69,20 @@ export default defineConfig({
         }
       ]
     },
+    // 隐藏侧边栏按钮
+    hideSidebar: true,
+    // 缩小右侧大纲
+    outline: {
+      level: [2, 3],
+      label: '目录'
+    },
+    // 导航栏配置
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '快速开始', link: '/01-intro' },
+      { text: '协议概述', link: '/04-transport' },
+      { text: 'GitHub', link: 'https://github.com/VDA5050/VDA5050' }
+    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/VDA5050/VDA5050' }
     ],
